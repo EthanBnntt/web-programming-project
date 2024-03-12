@@ -1,10 +1,10 @@
 # HTML
 * [ ] Uses index.html as first page
-* [ ] 2 html pages Minimum
-* [ ] 1 table
-* [ ] 1 form
+* [ ] 2 html pages Minimum. (A page for prices. A home page. An application page.)
+* [ ] 1 table comparing the prices of space vacations.
+* [ ] 1 form to apply to a space vacation.
 * [ ] Uses images
-* [ ] Uses links
+* [ ] Uses links to move between pages.
 * [ ] Well commented code
 
 # Cascading Style Sheets (CSS):
