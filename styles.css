@@ -71,6 +71,8 @@
     height: auto;
     display: block; /* removes bottom space/line */
     z-index: 1; /* Lower than the navbar */
+    min-height: 800px;
+    background-color: #000;
 }
 
 .centered-text {
