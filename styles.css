@@ -7,6 +7,7 @@
     float: left;
     width: auto;
     position: relative; 
+    z-index: 10; 
 }
 
 .header {
@@ -57,4 +58,74 @@
     /* Inverts the color of the button */
     background-color: #333;
     color: #fff;
+}
+
+.image-container {
+    position: relative;
+    text-align: center; /* Ensures the text inside is centered */
+    z-index: 1; /* Lower than the navbar */
+}
+
+.responsive-image {
+    width: 100%;
+    height: auto;
+    display: block; /* removes bottom space/line */
+    z-index: 1; /* Lower than the navbar */
+}
+
+.centered-text {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; 
+    font-size: 48px;
+}
+.additional-text {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; 
+    font-size: 20px;
+}
+.content-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.text-section {
+    flex: 1; /* Takes up only the necessary space based on its content */
+    padding-right: 20px; /* Adjust the padding as needed */
+}
+
+.image-section {
+    flex: 1; 
+}
+
+.content-image {
+    width: 100%;
+    height: auto;
+    display: block; /* Removes bottom spacing */
+}
+
+.video-button {
+    display: block; /* Change to block to fill the container width */
+    position: absolute; /* Position relative to image container */
+    top: 70%; /* Position below the additional text */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.video-button:hover {
+    background-color: #0056b3; /* Darkens the button color on hover */
 }
