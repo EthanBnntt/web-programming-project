@@ -38,10 +38,22 @@
 }
 
 .logo-bar {
-    background-color: #333;
+    background-color: #000;
     color: #fff;
     padding: 10px;
-    text-align: center;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.logo-element {
+    max-width: 100%;
+    height: 10vh;
+    /* Align the text vertically in the middle */
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    /* If the screen is small, expand the text size */
 }
 
 .navbar-button {
