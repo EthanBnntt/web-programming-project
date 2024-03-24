@@ -1,18 +1,40 @@
 * {
     box-sizing: border-box;
 }
+
 .navbar {
     background-color: #f1f1f1;
     float: left;
     width: auto;
 }
 
+.header {
+    padding: 20px;
+    text-align: center;
+    margin: 0;
+}
+
+.header-color {
+    background-color:#f2f2f2;
+}
+
 .main-content {
     border: 1px solid black;
+    display: flex;
+    flex-direction: column;
 }
 
 .border {
     border: 1px solid black;
+}
+
+.pricing-table {
+    border-collapse: collapse;
+}
+
+.pricing-table-element {
+    padding: 8px;
+    text-align: left;
 }
 
 .logo-bar {
