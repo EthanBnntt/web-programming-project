@@ -189,3 +189,63 @@ body {
     width: 100%;
     height: 40px;
 }
+
+/*Style for the about text sections. Spaces properly, with a flex display and flex wrap. Be careful if porting to the CSS, as there are conflicting "about" tags already*/
+.about-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+/*Style for the pictures. Same as above, except it centers. There's an easier way to simplify the differences between this and the about section, but it'll do for now*/
+.about-pictures {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+/*Style for setting up a column for the pictures. Easiest way to get all 3 pictures to fit on a row*/
+.about-column {
+    flex: 0 0 30%;
+    margin: 0 10px;
+    box-sizing: border-box;
+}
+
+/*Style for the img tag for the picture sections. This just resizes them and helps add padding to keep it looking nice*/
+.about-pictures img {
+    width: 300px;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+/*Style to properly align the pictures in the rows. Also likely an easier way to do this, but it'll do for now*/
+.about-column::after {
+content: "";
+clear: both;
+display: table;
+}
+
+/*Style for the captions under the pictures. Follows similar styling to the images. Be careful when messing with these and the pictures*/
+.about-img-caption {
+    text-align: center;
+    font-style: italic;
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+/*Style for the unordered list bullet points for the about section*/
+ul.ab {
+    list-style-type: square;
+    padding-left: 20px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+ul.ab li {
+    margin-bottom: 10px;
+}
