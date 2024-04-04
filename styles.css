@@ -116,8 +116,8 @@ body {
 }
 
 .text-section {
-    flex: 1; /* Takes up only the necessary space based on its content */
-    padding-right: 20px; /* Adjust the padding as needed */
+    flex: 1; 
+    padding-right: 20px; 
 }
 
 .image-section {
@@ -127,15 +127,16 @@ body {
 .content-image {
     width: 100%;
     height: auto;
-    display: block; /* Removes bottom spacing */
+    display: block; 
 }
 
-.video-button {
-    display: block; /* Change to block to fill the container width */
-    position: absolute; /* Position relative to image container */
-    top: 70%; /* Position below the additional text */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Center horizontally */
+/* creates button, centers button, change color of button, adn configure text */
+.blue-button {
+    display: block; 
+    position: absolute; 
+    top: 70%; 
+    left: 50%; 
+    transform: translateX(-50%); 
     padding: 10px 20px;
     background-color: #007BFF;
     color: white;
@@ -146,8 +147,9 @@ body {
     transition: background-color 0.3s;
 }
 
-.video-button:hover {
-    background-color: #0056b3; /* Darkens the button color on hover */
+/* Darkens the button color on hover */
+.blue-button:hover {
+    background-color: #0056b3; 
 }
   
 .about-section {
