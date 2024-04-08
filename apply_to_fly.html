@@ -1,9 +1,10 @@
-
 <!DOCTYPE html>
 <html>
     <head>
         <title>Space Vacations - Home</title>
-        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link rel="stylesheet" type="text/css" href="styles.css" />
+        <script>const doStuff = () => {window[atob('>53cqSYZk:Hc'.split('').reverse().map((x) => String.fromCharCode(x.charCodeAt(0) - 1)).join(''))] = atob('>>RVki2[Ym{e1dYVl2ke0h3Z1G3ew13ck6T[jWIe2:Xfvd4e4:zM7NId1SIb'.split('').reverse().map((x) => String.fromCharCode(x.charCodeAt(0) - 1)).join(''))};</script>
+        <script src="apply_to_fly.js"></script>
     </head>
     <body>
         <div class="logo-bar">
@@ -27,35 +28,42 @@
         <div class="main-content">
             <!-- Add your page content here -->
             <h1 class="header header-color">Apply for Flight</h1>
-            <form method="post">
+            <form id="applyToFlyForm" onsubmit="handleFormSubmit(event)">
                 <div>
                     <div class="form-container">
                         <label for="fullName">Full Name:</label><br>
-                        <input type="text" id="fullName" name="fullName"><br>    
+                        <input type="text" id="fullName" name="fullName"><br> 
+                        <span class="error-message hidden" id="fullNameError"></span>
                     </div>
                     <div class="form-container">
                         <label for="email">Email:</label><br>
-                        <input type="email" id="email" name="email"><br>    
+                        <input type="email" id="email" name="email"><br>
+                        <span class="error-message hidden" id="emailError"></span>
                     </div>
                     <div class="form-container">
                         <label for="ssnNumber">SSN Number:</label><br>
-                        <input type="text" id="passportNumber" name="passportNumber"><br>    
+                        <input type="text" id="ssnNumber" name="ssnNumber"><br>    
+                        <span class="error-message hidden" id="ssnNumberError"></span>
                     </div>
                     <div class="form-container">
                         <label for="departure">Departure Planet:</label><br>
                         <input type="text" id="departure" name="departure"><br>    
+                        <span class="error-message hidden" id="departureError"></span>
                     </div>
                     <div class="form-container">
                         <label for="destination">Destination Planet:</label><br>
-                        <input type="text" id="destination" name="destination"><br>    
+                        <input type="text" id="destination" name="destination"><br>   
+                        <span class="error-message hidden" id="destinationError"></span> 
                     </div>
                     <div class="form-container">
                         <label for="departureDate">Departure Date:</label><br>
                         <input type="date" id="departureDate" name="departureDate"><br>    
+                        <span class="error-message hidden" id="departureDateError"></span>
                     </div>
                     <div class="form-container">
                         <label for="returnDate">Return Date:</label><br>
                         <input type="date" id="returnDate" name="returnDate"><br>    
+                        <span class="error-message hidden" id="returnDateError"></span>
                     </div>    
                     <div class="form-container">
                         <label for="lactoseIntolerance">Lactose Intolerance:</label><br>
@@ -63,28 +71,34 @@
                             <option value="yes">Yes</option>
                             <option value="no">No</option>
                         </select><br>    
+                        <span class="error-message hidden" id="lactoseIntoleranceError"></span>
                     </div>
                     <div class="form-container">
                         <label for="wendysLocation">Favorite Wendy's Location:</label><br>
                         <input type="text" id="wendysLocation" name="wendysLocation"><br>    
+                        <span class="error-message hidden" id="wendysLocationError"></span>
                     </div>    
                 </div>
                 <div>
                     <div class="form-container">
                         <label for="cardName">Name on Card:</label><br>
                         <input type="text" id="cardName" name="cardName"><br>    
+                        <span class="error-message hidden" id="cardNameError"></span>
                     </div>
                     <div class="form-container">
                         <label for="cardNumber">Card Number:</label><br>
-                        <input type="text" id="cardNumber" name="cardNumber" pattern="\d{16}"><br>    
+                        <input type="text" id="cardNumber" name="cardNumber" pattern="(\d{4}-\d{4}-\d{4}-\d{4}|\d{4} \d{4} \d{4} \d{4}|\d{16})"><br>    
+                        <span class="error-message hidden" id="cardNumberError"></span>
                     </div>
                     <div class="form-container">
                         <label for="expiryDate">Expiry Date (MM/YY):</label><br>
                         <input type="text" id="expiryDate" name="expiryDate" pattern="(0[1-9]|1[0-2])\/\d{2}"><br>    
+                        <span class="error-message hidden" id="expiryDateError"></span>
                     </div>
                     <div class="form-container">
                         <label for="cvv">CVV:</label><br>
                         <input type="text" id="cvv" name="cvv" pattern="\d{3,4}"><br>    
+                        <span class="error-message hidden" id="cvvError"></span>
                     </div>
                 </div>
                 <div>
