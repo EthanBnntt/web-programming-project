@@ -251,3 +251,11 @@ ul.ab {
 ul.ab li {
     margin-bottom: 10px;
 }
+
+.hidden {
+    display: none;
+}
+
+.error-message {
+    color: red;
+}
