@@ -1,6 +1,6 @@
 let errorMessages = {};
 
-window.onload = function() {
+window.addEventListener("load", function() {
     errorMessages = {
         "fullName": document.getElementById("fullNameError"),
         "email": document.getElementById("emailError"),
@@ -16,7 +16,8 @@ window.onload = function() {
         "expiryDateError": document.getElementById("expiryDateError"),
         "cvvError": document.getElementById("cvvError"),
     };
-};
+    console.log("Loaded error message elements...")
+});
 
 // https://en.wikipedia.org/wiki/Luhn_algorithm
 function verify_credit_card(card_number) {
@@ -140,15 +141,18 @@ function handleFormSubmit(event) {
 
     // Validate Wendy's location
     let wendysLocation = document.getElementById("wendysLocation").value;
-    // TODO: Get all the wendy's locations
-    if (wendysLocation === "") {
-        errorMessages["wendysLocationError"].innerText = "Please select a Wendy's location.";
+    // Split the location into words
+    let locationParts = wendysLocation.split(" ");
+    // Remove non-alphabetic characters
+    locationParts = locationParts.map(part => part.replace(/[^a-zA-Z]/g, ""));
+    // Check if the location is in the format of F... B..., G...
+    console.log(locationParts)
+    if (wendysLocation === "" || locationParts.length !== 3 || locationParts[0][0] !== "F" || locationParts[1][0] !== "B" || locationParts[2][0] !== "G") {
+        errorMessages["wendysLocationError"].innerText = "Your Wendy's location must be in the format of F... B..., G...";
         errorMessages["wendysLocationError"].classList.remove("hidden");
         isValid = false;
     } else {
-        //!errorMessages["wendysLocationError"].classList.add("hidden");
-        errorMessages["wendysLocationError"].innerText = "TODO";
-        errorMessages["wendysLocationError"].classList.remove("hidden");
+        errorMessages["wendysLocationError"].classList.add("hidden");
     }
     
     // Validate the credit cards
